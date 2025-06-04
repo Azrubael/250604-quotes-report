@@ -25,9 +25,13 @@ data.set_index('timestamp', inplace=True)
 # Обчислення середньої ціни за день
 data['average_price'] = (data['high'] + data['low']) / 2
 
+# Обчислення 50-денного ковзного середнього
+data['MA50'] = data['average_price'].rolling(window=50).mean()
+
 # Будування простого графіка котировок
 plt.figure(figsize=(18, 6))
 plt.plot(data.index, data['average_price'], label='Avg price BTC/USDT', color='blue')
+plt.plot(data.index, data['MA50'], label='MA50', color='red')
 plt.title('The graph of quotes BTC/USDT for 365 days')
 plt.xlabel('Date')
 plt.ylabel('USDT price')
