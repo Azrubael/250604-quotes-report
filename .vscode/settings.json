@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "${workspaceFolder}/crypto_env/bin/python",
+    "python.venvPath": "${workspaceFolder}/crypto_env"
+}
