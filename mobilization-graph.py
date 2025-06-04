@@ -1,5 +1,5 @@
 import openpyxl
-import json
+# import json
 from datetime import datetime
 import matplotlib.pyplot as plt
 from collections import defaultdict
@@ -50,8 +50,8 @@ for row in shpk_ws.iter_rows(min_row=5, values_only=True):  # Пропустит
         }
 
 
-pretty_json = json.dumps(shpk_data, indent=2, ensure_ascii=False)
-print(pretty_json)
+# pretty_json = json.dumps(shpk_data, indent=2, ensure_ascii=False)
+# print(pretty_json)
 
 # Підготовка даних для графіка
 months = sorted(mobilized_count.keys())
@@ -59,7 +59,7 @@ counts = [mobilized_count[month] for month in months]
 
 # Створення стовпчастого графіка
 plt.figure(figsize=(10, 6))
-plt.bar(months, counts, color='skyblue')
+plt.bar(months, counts, color='blue')
 plt.xlabel('Місяць')
 plt.ylabel('Кількість мобілізованих')
 plt.title('Кількість мобілізованих по місяцях')
