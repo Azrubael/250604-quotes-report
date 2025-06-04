@@ -31,7 +31,7 @@ mc = mpf.make_marketcolors(up='green', down='red', inherit=True)
 s = mpf.make_mpf_style(marketcolors=mc)
 
 # Здереження графіка у файл
-graph_file = 'btc_candle_graph.png'
+graph_file = 'pics/btc_candle_graph.png'
 mpf.plot(data, type='candle', style=s, title='The graph of quotes BTC/USDT for 365 days',
          ylabel='USDT price', volume=False, addplot=mpf.make_addplot(data['MA50'], color='blue'), savefig=graph_file)
 

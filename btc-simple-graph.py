@@ -39,7 +39,7 @@ plt.legend()
 plt.grid()
 
 # Здереження графік у файл
-graph_file = 'btc_price_graph.png'
+graph_file = 'pics/btc_price_graph.png'
 plt.savefig(graph_file)
 plt.close()
 print(f'Графік котировок {symbol} за останні {prolongation} збережено в файл {graph_file}')
